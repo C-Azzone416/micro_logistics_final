@@ -16,23 +16,8 @@ class SiteUser(AbstractUser):
     phone = models.CharField(max_length=10)
 
 
-class StockType(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    description = models.TextField(blank=True, null=True)
+class ACNHLoverModel(models.model):
+    user_name = models.CharField(max_length=100)
+    island_name = models.CharField(max_length=100)
+    favorite_villager = models.CharField(max_length=100)
 
-
-class Stock(models.Model):
-    user = models.ForeignKey('SiteUser', on_delete=models.CASCADE, related_name='user')
-    stock_type = models.ForeignKey('StockType', on_delete=models.CASCADE, related_name='type')
-    count = models.IntegerField(default=0)
-
-    class Meta:
-        unique_together = ('user', 'stock_type',)
-
-
-class Claim(models.Model):
-    claimed_by = models.ForeignKey('SiteUser', on_delete=models.CASCADE, related_name='claimed_by')
-    claimed_from = models.ForeignKey('SiteUser', on_delete=models.CASCADE, related_name='claimed_from')
-    stock_type = models.ForeignKey('StockType', on_delete=models.CASCADE, related_name='stock_type')
-    count = models.IntegerField(default=0)
-    delivery_timestamp = models.DateTimeField(default=None, blank=True, null=True)
