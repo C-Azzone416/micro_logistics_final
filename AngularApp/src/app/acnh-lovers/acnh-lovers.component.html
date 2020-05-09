@@ -1,0 +1,33 @@
+<div *ngIf="showForm; else chooseRole">
+    <h1>Fill Out This Form to Register</h1>
+    <div [hidden]="!this.errorMessage">
+        {{errorMessage}}
+    </div>
+    <form (ngSubmit)="register()">
+        <div>
+            <h2>Your Info</h2>
+        </div>
+        <div>
+            <label for="userName">Animal Crossing Username:</label>
+            <input type="text" id="userName" name="userName"
+                   required
+                   [(ngModel)]="userName"/>
+        </div>
+        <div>
+            <label for="islandName">Island Name:</label>
+            <input type="text" id="islandName" name="islandName"
+                   required
+                   [(ngModel)]="islandName"/>
+        </div>
+        <div>
+            <label for="favoriteVillager">Favorite Villager:</label>
+            <input type="text" id="favoriteVillager" name="favoriteVillager"
+                   required
+                   [(ngModel)]="favoriteVillager"/>
+        </div>
+
+
+        <button color="primary" mat-raised-button type="submit">Submit</button>
+    </form>
+</div>
+
