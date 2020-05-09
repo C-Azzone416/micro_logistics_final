@@ -20,7 +20,7 @@ const URL_CURRENT_CLAIM = URL_ROOT + '/api/current_claims/';
 @Injectable({
     providedIn: 'root'
 })
-export class MicroLogisticsApiService {
+export class AcnhLoversApiService {
     private currentUser: SiteUser;
     private stockTypes: {};
 

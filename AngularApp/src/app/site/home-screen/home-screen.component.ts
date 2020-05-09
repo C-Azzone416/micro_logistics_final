@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {SiteUser, Stock} from '../../data-classes';
 import {Observable} from 'rxjs';
 import {share} from 'rxjs/operators';
@@ -13,7 +13,7 @@ export class HomeScreenComponent implements OnInit {
   currentUser$: Observable<SiteUser>;
 
   constructor(
-    private apiService: MicroLogisticsApiService,
+    private apiService: AcnhLoversApiService,
   ) {
   }
 

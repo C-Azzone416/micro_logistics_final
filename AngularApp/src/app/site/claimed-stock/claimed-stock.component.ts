@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {tap} from "rxjs/operators";
 
 @Component({
@@ -11,7 +11,7 @@ export class ClaimedStockComponent implements OnInit {
     public stockTypeNames: string[]
 
     constructor(
-        private apiService: MicroLogisticsApiService,
+        private apiService: AcnhLoversApiService,
     ) {
         this.stockTypeNames = [];
     }

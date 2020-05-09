@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SiteUser} from '../../data-classes';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {Router} from '@angular/router';
 import {AuthService} from '../auth/services/auth.service';
 
@@ -17,7 +17,7 @@ export class RegisterScreenComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private apiService: MicroLogisticsApiService,
+    private apiService: AcnhLoversApiService,
     private authService: AuthService
   ) {
   }

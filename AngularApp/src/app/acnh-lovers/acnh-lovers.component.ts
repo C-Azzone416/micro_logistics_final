@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SiteUser} from '../data-classes';
 import {Router} from '@angular/router';
-import {MicroLogisticsApiService} from '../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../acnh-lovers-api.service';
 import {AuthService} from '../user-management/auth/services/auth.service';
 
 @Component({
@@ -16,27 +16,14 @@ export class AcnhLoversComponent implements OnInit {
   errorMessage = '';
 
   constructor(
-      private apiService: MicroLogisticsApiService,
+      private apiService: AcnhLoversApiService,
   ) {
   }
 
   ngOnInit(): void {
   }
 
-  setUserType(userType: string) {
-    if (userType === 'hasStuff') {
-      this.newUser.providesStock = true;
-      this.newUser.needsStock = false;
-    } else {
-      this.newUser.providesStock = false;
-      this.newUser.needsStock = true;
-    }
-
-    this.showForm = true;
-  }
-
-  register() {
-    // TODO: client-side password verification
+  submitForm{
     this.apiService.registerUser(this.newUser).subscribe(
         data => {
           this.authService.login({username: this.newUser.email, password: this.newUser.password}).subscribe(

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../auth/services/auth.service';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {tap} from 'rxjs/operators';
 import {SiteUser} from '../../data-classes';
 
@@ -17,7 +17,7 @@ export class ProfileScreenComponent implements OnInit {
   errors = [];
 
   constructor(
-    private apiService: MicroLogisticsApiService,
+    private apiService: AcnhLoversApiService,
   ) {
   }
 

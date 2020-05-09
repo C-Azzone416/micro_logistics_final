@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {Observable} from 'rxjs';
 import {share, tap} from 'rxjs/operators';
 
@@ -18,7 +18,7 @@ export class StockSearchScreenComponent implements OnInit {
   claimStockId: number;
 
   constructor(
-    private apiService: MicroLogisticsApiService
+    private apiService: AcnhLoversApiService
   ) { }
 
   ngOnInit(): void {

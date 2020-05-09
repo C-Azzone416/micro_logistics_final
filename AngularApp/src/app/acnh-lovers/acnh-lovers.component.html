@@ -1,9 +1,9 @@
-<div *ngIf="showForm; else chooseRole">
+<div>
     <h1>Fill Out This Form to Register</h1>
     <div [hidden]="!this.errorMessage">
         {{errorMessage}}
     </div>
-    <form (ngSubmit)="register()">
+    <form (ngSubmit)="submitForm()">
         <div>
             <h2>Your Info</h2>
         </div>

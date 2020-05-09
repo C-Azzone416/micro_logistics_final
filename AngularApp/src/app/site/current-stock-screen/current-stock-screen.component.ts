@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {SiteUser, Stock} from '../../data-classes';
-import {MicroLogisticsApiService} from '../../micro-logistics-api.service';
+import {AcnhLoversApiService} from '../../acnh-lovers-api.service';
 import {share} from 'rxjs/operators';
 
 @Component({
@@ -24,7 +24,7 @@ export class CurrentStockScreenComponent implements OnInit {
   noStockMessage: string;
 
   constructor(
-    private apiService: MicroLogisticsApiService,
+    private apiService: AcnhLoversApiService,
   ) {
   }
 
