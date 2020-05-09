@@ -6,7 +6,7 @@ from micro_logistics_app.views import *
 
 urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
-    path('ACNH_Lovers', ACNHRegistrationView.as_view(), name='ACNH_Lovers'),
+    path('acnh_lovers', ACNHRegistrationView.as_view(), name='acnh_lovers'),
 
 
 ]

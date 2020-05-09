@@ -6,6 +6,7 @@ import {URL_ROOT} from './globals';
 import {Observable, of} from 'rxjs';
 import {tap} from 'rxjs/operators';
 
+const URL_ACNH_LOVERS = URL_ROOT + '/api/acnh_lovers/'
 const URL_REGISTER = URL_ROOT + '/api/register/';
 const URL_PROFILE = URL_ROOT + '/api/profile/';
 const URL_NEW_PASSWORD = URL_ROOT + '/api/update_password/';
@@ -47,6 +48,10 @@ export class AcnhLoversApiService {
             zip: newUser.zip,
             phone: newUser.phone,
         });
+    }
+
+    submitAcnhLoversForm(userName: string, islandName: string, favoriteVillager, string): Observable<any>{
+        return this.http.post(URL)
     }
 
     getUserProfile(): Observable<SiteUser> {
