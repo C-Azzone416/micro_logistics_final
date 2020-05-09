@@ -12,10 +12,12 @@ import {SiteModule} from './site/site.module';
 import {UserManagementModule} from './user-management/user-management.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material-module';
+import { AcnhLoversComponent } from './acnh-lovers/acnh-lovers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AcnhLoversComponent,
   ],
   imports: [
     MaterialModule,
