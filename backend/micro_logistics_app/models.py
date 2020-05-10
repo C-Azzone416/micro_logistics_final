@@ -16,7 +16,7 @@ class SiteUser(AbstractUser):
     phone = models.CharField(max_length=10)
 
 
-class ACNHLoverModel(models.model):
+class ACNHLoverModel(models.Model):
     user_name = models.CharField(max_length=100)
     island_name = models.CharField(max_length=100)
     favorite_villager = models.CharField(max_length=100)

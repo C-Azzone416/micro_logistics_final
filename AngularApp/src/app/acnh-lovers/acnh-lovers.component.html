@@ -1,12 +1,10 @@
 <div>
-    <h1>Fill Out This Form to Register</h1>
+    <h1>Tell us about your Animal Crossing Life!</h1>
     <div [hidden]="!this.errorMessage">
         {{errorMessage}}
     </div>
     <form (ngSubmit)="submitForm()">
-        <div>
-            <h2>Your Info</h2>
-        </div>
+
         <div>
             <label for="userName">Animal Crossing Username:</label>
             <input type="text" id="userName" name="userName"

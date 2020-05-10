@@ -14,5 +14,5 @@ class RegisterView(generics.CreateAPIView):
 
 class ACNHRegistrationView(generics.CreateAPIView):
     permission_classes = [AllowAny]
-    serializer_class = NewUserSerializer
+    serializer_class = ACNHLoverSerializer
 
